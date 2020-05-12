@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+2:wght@500&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div id="fullpage">
+
+      <!--FirstSection-->
+
+      <div class="section jarallax" data-jarallax data-speed="0.2">
+            <img class="jarallax-img" src="firstimage.png" alt=""></img>
+            <div class="hello">
+              HELLO,
+            </div>
+            <div class="name">
+              I AM JAYANT TOKAS
+            </div>
+
+      </div>
+
+
+      <!--SecondSection-->
+
+    	<div class="section jarallax" data-jarallax data-speed="0.2`">
+            <img class="jarallax-img back" src="secondpage.png" alt=""></img>
+              <div class="about-me">
+                About Me. <br>
+                <p style="padding-top:1vh; font-size:70px;"> WEB <span style="color:#DED417; font-size:70px;"> DEVELOPER, <br> GRAPHIC </span> DESIGNER </p>
+                <p class="intro">I am from planet with a passion of Web, Graphic and Interactive design.
+                I specialise in designing minimal website and graphics.
+                <br>Enthusiastic about life, design and innovation. I am Creative, Computer Geek and an Explorer.
+                I love to travel. <br>Whenever I have some extra time to spare I hit gym or go out to click some potraits or landscapes.<br>
+                I am passionate guy with a drive to learn something new everyday.</p>
+              </div>
+
+            </div>
+
+
+
+    	<div class="section">3</div>
+    	<div class="section">4</div>
+    </div>
+
+
+
+    <script src="index.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js" charset="utf-8"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+      var myFullpage = new fullpage('#fullpage', {
+
+	//Navigation
+	menu: '#menu',
+  licenseKey: 'YOUR KEY HERE',
+	lockAnchors: false,
+	anchors:['firstPage', 'secondpage'],
+	navigation: true,
+	navigationPosition: 'right',
+	navigationTooltips: ['firstSlide', 'secondSlide'],
+	showActiveTooltip: false,
+	slidesNavigation: true,
+	slidesNavPosition: 'bottom',
+
+	//Scrolling
+	css3: true,
+	scrollingSpeed: 1000,
+	autoScrolling: true,
+	fitToSection: true,
+	fitToSectionDelay: 1000,
+	scrollBar: false,
+	easing: 'easeInCubic',
+	easingcss3: 'ease',
+	loopBottom: false,
+	loopTop: false,
+	loopHorizontal: true,
+	continuousVertical: false,
+	continuousHorizontal: false,
+	scrollHorizontally: true,
+	interlockedSlides: false,
+	dragAndMove: false,
+	offsetSections: false,
+	resetSliders: false,
+	fadingEffect: true,
+	normalScrollElements: '#element1, .element2',
+	scrollOverflow: false,
+	scrollOverflowReset: false,
+	scrollOverflowOptions: null,
+	touchSensitivity: 15,
+	bigSectionsDestination: null,
+
+	//Accessibility
+	keyboardScrolling: true,
+	animateAnchor: true,
+	recordHistory: true,
+
+	//Design
+	controlArrows: true,
+	verticalCentered: true,
+	paddingTop: '3em',
+	paddingBottom: '10px',
+	fixedElements: '#header, .footer',
+	responsiveWidth: 0,
+	responsiveHeight: 0,
+	responsiveSlides: false,
+	parallax: true,
+	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
+	cards: false,
+	cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+
+	//Custom selectors
+	sectionSelector: '.section',
+	slideSelector: '.slide',
+
+	lazyLoading: true,
+
+	//events
+	onLeave: function(origin, destination, direction){},
+	afterLoad: function(origin, destination, direction){},
+	afterRender: function(){},
+	afterResize: function(width, height){},
+	afterReBuild: function(){},
+	afterResponsive: function(isResponsive){},
+	afterSlideLoad: function(section, origin, destination, direction){},
+	onSlideLeave: function(section, origin, destination, direction){}
+
+});
+
+    </script>
+
+  </body>
+</html>

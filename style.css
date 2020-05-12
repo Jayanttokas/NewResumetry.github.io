@@ -1,0 +1,83 @@
+.jarallax > .jarallax-img {
+    position: absolute;
+    object-fit: cover;
+    /* support for plugin https://github.com/bfred-it/object-fit-images */
+    font-family: 'object-fit: auto;';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/*FirstSection CSS*/
+
+.hello {
+  font-size: 120px;
+  font-family: 'Playfair Display', serif;
+  color: #00754B;
+  margin-left: 15vw;
+  position: relative;
+  animation-name: helloanim;
+  animation-duration: 4s;
+}
+
+@keyframes helloanim {
+  0%   { left:-700px; top:0px;}
+  100%  { left: 0px; top:0px;}
+}
+
+.name{
+  color: #323232;
+  font-size: 60px;
+  font-family: 'Abril Fatface', cursive;
+  margin-left: 15vw;
+  position: relative;
+  animation-name: nameanim;
+  animation-duration: 4s;
+}
+
+@keyframes nameanim {
+  0%   { left: 0px; top:500px;}
+  100%  { left: 0px; top:0px;}
+}
+
+.jarallax-img{
+  animation-name: fadeIn;
+  animation-duration: 4s;
+}
+
+@keyframes fadeIn {
+ 0% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+
+
+
+/*SecondSection CSS*/
+
+.back{
+  background-color: #272727;
+}
+
+.about-me{
+  box-shadow: 0px 0px 40px 10px #272727;
+  border-radius: 40px;
+  padding: 40px;
+  color: #FAF8FF;
+  font-size: 20px;
+  width: 70vw;
+  margin-left: 15vw;
+}
+
+p:first-child{
+  font-family: 'Abril Fatface', cursive;
+
+}
+
+.intro{
+  margin-top: 10vh;
+  font-size:22px;
+  color:white;
+  font-family: 'Baloo 2', cursive;
+}
