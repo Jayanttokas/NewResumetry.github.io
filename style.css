@@ -81,3 +81,44 @@ p:first-child{
   color:white;
   font-family: 'Baloo 2', cursive;
 }
+
+
+/*Thirdection CSS*/
+
+.project-heading{
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  text-align: center;
+}
+
+.project-grid{
+  margin: 0 10vw;
+  margin-top: 10vw;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 30px 0px;
+}
+
+.project-box{
+  background-color: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  font-size: 25px;
+  font-family: 'Baloo 2', cursive;
+  color: black;
+  border-radius: 50px;
+  text-align: center;
+  padding: 20px 10px 20px 10px;
+  width: 15vw;
+}
+
+.hover{
+  background-image: ""!important;
+  background-color: #DED417!important;
+  border: 1px solid black
+  color: black!important;
+  box-shadow: 0px 0px 50px 5px black!important;
+}
+
+a, a:hover, a:visited{
+  color: black;
+  text-decoration: none;
+}
