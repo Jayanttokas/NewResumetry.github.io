@@ -1,12 +1,45 @@
+<?php
+
+  if($_POST){
+
+    $emailTo = "tokasjayant@gmail.com";
+
+    $subject = $_POST['subject'];
+
+    $content = $_POST['message'];
+
+    $headers = "From: ".$_POST['email'];
+
+    if (mail($emailTo, $subject, $content, $headers)) {
+
+        $successMessage = 'Your message was sent, we\'ll get back to you ASAP!';
+
+
+    }
+  }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title></title>
+
+    <!--FULLPAGE JS CSS-->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.css">
     <link rel="stylesheet" href="style.css">
+
+    <!--W3 SCHOOLS CSS-->
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- GOOGLEFONTS -->
+
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+2:wght@500&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
+
   </head>
   <body>
 
@@ -15,7 +48,7 @@
       <!--FirstSection-->
 
       <div class="section jarallax" data-jarallax data-speed="0.2">
-            <img class="jarallax-img" src="firstimage.png" alt=""></img>
+            <img class="jarallax-img" src="img/firstimage.png" alt=""></img>
             <div class="hello">
               HELLO,
             </div>
@@ -29,7 +62,7 @@
       <!--SecondSection-->
 
     	<div class="section jarallax" data-jarallax data-speed="0.2`">
-            <img class="jarallax-img" src="secondpage.png" alt=""></img>
+            <img class="jarallax-img" src="img/secondpage.png" alt=""></img>
               <div class="about-me trans">
                 About Me. <br>
                 <p style="padding-top:1vh; font-size:70px;"> WEB <span style="color:#DED417; font-size:70px;"> DEVELOPER, <br> GRAPHIC </span> DESIGNER </p>
@@ -45,10 +78,10 @@
       <!--ThirdSection-->
 
       <div class="section jarallax" data-jarallax data-speed="0.2">
-            <img class="jarallax-img xyz" src="third.png" style="opacity:0.4  ;" alt=""></img>
+            <img class="jarallax-img xyz" src="img/third.png" style="opacity:0.4  ;" alt=""></img>
               <div class="project-heading">
-                <span style="text-decoration:underline; text-shadow:0px 0px 10px black; letter-spacing:10px;">PROJECTS</span>
-                <div class="project-grid">
+                <span style="text-decoration:underline; text-shadow:0px 0px 10px black; letter-spacing:10px;" id="projects">PROJECTS</span>
+                <div class="project-grid" id="p-grid">
                   <div class="project-box" id="project-box1" onmouseover="hoverStyle(1)" onmouseout="removeStyle(1)" >
                     <a href="https://jayanttokas.github.io/CarDealerShipTemplete.github.io/">CAR DEALERSHIP</a>
                   </div>
@@ -80,13 +113,14 @@
 
 
       <!--FOURTH SECTION-->
+
       <div class="section jarallax" data-jarallax data-speed="0.2">
 
         <!--SLIDE 1-->
 
         <div class="slide">
-          <img class="jarallax-img" src="fourth.jpg" alt=""></img>
-          <div class="edu">
+          <img class="jarallax-img" src="img/fourth.jpg" alt=""></img>
+          <div class="edu" id="education">
             EDUCATION <br>
           </div>
           <div class="swipe">
@@ -141,42 +175,42 @@
       <!--FIFTH SECTION-->
 
       <div class="section jarallax" data-jarallax data-speed="0.2`">
-            <img class="jarallax-img" src="skill.jpg" alt=""></img>
+            <img class="jarallax-img" src="img/skill.jpg" alt=""></img>
             <div class="skills">
               <span style="text-shadow: 0px 0px 10px #3A2D20;"> SKILLS</span>
             </div>
 
             <div class="Content">
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:95%; height:2vw; ">HTML:  95%</div>
+                  <div class="w3-container w3-round w3-red" id="1" style="width:95%; height:2vw; ">HTML:  95%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:90%; height:2vw; ">CSS:  90%</div>
+                  <div class="w3-container w3-round w3-red" id="2" style="width:90%; height:2vw; ">CSS:  90%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:90%; height:2vw; ">JavaScript:  90%</div>
+                  <div class="w3-container w3-round w3-red" id="3" style="width:90%; height:2vw; ">JavaScript:  90%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:70%; height:2vw; ">Wordpress:  70%</div>
+                  <div class="w3-container w3-round w3-red" id="4" style="width:70%; height:2vw; ">Wordpress:  70%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:70%; height:2vw; ">Photoshop:  70%</div>
+                  <div class="w3-container w3-round w3-red" id="5" style="width:70%; height:2vw; ">Photoshop:  70%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:70%; height:2vw; ">Illustrator:  70%</div>
+                  <div class="w3-container w3-round w3-red" id="6" style="width:70%; height:2vw; ">Illustrator:  70%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:90%; height:2vw; ">Bootstrap:  90%</div>
+                  <div class="w3-container w3-round w3-red" id="7" style="width:90%; height:2vw; ">Bootstrap:  90%</div>
               </div>
 
               <div class="w3-light-grey w3-round progress">
-                  <div class="w3-container w3-round w3-red" style="width:70%; height:2vw; ">React:  70%</div>
+                  <div class="w3-container w3-round w3-red" id="8" style="width:70%; height:2vw; ">React:  70%</div>
               </div>
 
 
@@ -186,10 +220,41 @@
 
 
       <!--SIXTH SECTION-->
-      <div class="section jarallax" data-jarallax data-speed="0.5">
-            <img class="jarallax-img" src="contact.jpg" alt=""></img>
-              <div class="about-me trans">
 
+
+
+      <div class="section jarallax" data-jarallax data-speed="0.5">
+            <img class="jarallax-img" src="img/contact.jpg" alt=""></img>
+              <div class="about-me trans contact">
+                <form method="post">
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="fname">Name</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="text" id="fname" name="name" placeholder="Your name..">
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="email">Email</label>
+                        </div>
+                        <div class="col-75">
+                          <input type="email" id="email" name="email" placeholder="Your Email"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-25">
+                          <label for="subject">Message</label>
+                        </div>
+                        <div class="col-75">
+                          <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <input type="submit" id="submit" value="Submit">
+                      </div>
+                </form>
               </div>
 
       </div>
@@ -200,7 +265,15 @@
 
 
     <script src="index.js" charset="utf-8"></script>
+
+    <!--JARALLAX JS-->
+
     <script src="https://unpkg.com/jarallax@1/dist/jarallax.min.js"></script>
+
+
+    <!--FULLPAGE JS-->
+
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js" charset="utf-8"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js" charset="utf-8"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js" charset="utf-8"></script>
@@ -208,78 +281,111 @@
 
       var myFullpage = new fullpage('#fullpage', {
 
-	//Navigation
-	menu: '#menu',
-  licenseKey: 'YOUR KEY HERE',
-	lockAnchors: false,
-	anchors:['firstPage', 'secondpage', "thirdPage", "FourthPage"],
-	navigation: true,
-	navigationPosition: 'right',
-	navigationTooltips: ['firstSlide', 'secondSlide',"thirdSlide", "fourthSlide"],
-	showActiveTooltip: false,
-	slidesNavigation: true,
-	slidesNavPosition: 'bottom',
+          	//Navigation
+          	menu: '#menu',
+            licenseKey: 'YOUR KEY HERE',
+          	lockAnchors: false,
+          	anchors:['firstPage', 'secondpage', "thirdPage", "FourthPage"],
+          	navigation: true,
+          	navigationPosition: 'right',
+          	navigationTooltips: ['firstSlide', 'secondSlide',"thirdSlide", "fourthSlide"],
+          	showActiveTooltip: false,
+          	slidesNavigation: true,
+          	slidesNavPosition: 'bottom',
 
-	//Scrolling
-	css3: true,
-	scrollingSpeed: 1200,
-	autoScrolling: true,
-	fitToSection: true,
-	fitToSectionDelay: 1000,
-	scrollBar: false,
-	easing: 'easeInCubic',
-	easingcss3: 'ease',
-	loopBottom: false,
-	loopTop: false,
-	loopHorizontal: true,
-	continuousVertical: false,
-	continuousHorizontal: false,
-	scrollHorizontally: true,
-	interlockedSlides: false,
-	dragAndMove: false,
-	offsetSections: false,
-	resetSliders: false,
-	fadingEffect: true,
-	scrollOverflow: false,
-	scrollOverflowReset: false,
-	scrollOverflowOptions: null,
-	touchSensitivity: 10,
-	bigSectionsDestination: null,
+          	//Scrolling
+          	css3: true,
+          	scrollingSpeed: 1200,
+          	autoScrolling: true,
+          	fitToSection: true,
+          	fitToSectionDelay: 1000,
+          	scrollBar: false,
+          	easing: 'easeInCubic',
+          	easingcss3: 'ease',
+          	loopBottom: false,
+          	loopTop: false,
+          	loopHorizontal: true,
+          	continuousVertical: false,
+          	continuousHorizontal: false,
+          	scrollHorizontally: true,
+          	interlockedSlides: false,
+          	dragAndMove: false,
+          	offsetSections: false,
+          	resetSliders: false,
+          	fadingEffect: true,
+          	scrollOverflow: false,
+          	scrollOverflowReset: false,
+          	scrollOverflowOptions: null,
+          	touchSensitivity: 10,
+          	bigSectionsDestination: null,
 
-	//Accessibility
-	keyboardScrolling: true,
-	animateAnchor: true,
-	recordHistory: true,
+          	//Accessibility
+          	keyboardScrolling: true,
+          	animateAnchor: true,
+          	recordHistory: true,
 
-	//Design
-	controlArrows: true,
-	verticalCentered: true,
-	paddingTop: '3em',
-	paddingBottom: '10px',
-	fixedElements: '#header, .footer',
-	responsiveWidth: 0,
-	responsiveHeight: 0,
-	responsiveSlides: false,
-	parallax: true,
-	parallaxOptions: {type: 'reveal', percentage: 50, property: 'translate'},
-	cards: false,
-	cardsOptions: {perspective: 100, fadeContent: true, fadeBackground: true},
+          	//Design
+          	controlArrows: true,
+          	verticalCentered: true,
+          	paddingTop: '3em',
+          	paddingBottom: '10px',
+          	fixedElements: '#header, .footer',
+          	responsiveWidth: 0,
+          	responsiveHeight: 0,
+          	responsiveSlides: true,
+          	parallax: true,
+          	parallaxOptions: {type: 'reveal', percentage: 50, property: 'translate'},
 
-	//Custom selectors
-	sectionSelector: '.section',
-	slideSelector: '.slide',
+          	//Custom selectors
+          	sectionSelector: '.section',
+          	slideSelector: '.slide',
 
-	lazyLoading: true,
+          	lazyLoading: true,
 
-	//events
-	onLeave: function(origin, destination, direction){},
-	afterLoad: function(origin, destination, direction){},
-	afterRender: function(){},
-	afterResize: function(width, height){},
-	afterReBuild: function(){},
-	afterResponsive: function(isResponsive){},
-	afterSlideLoad: function(section, origin, destination, direction){},
-	onSlideLeave: function(section, origin, destination, direction){}
+          	//events
+            onLeave: function(origin, destination, direction){
+                  		var leavingSection = this;
+
+                  		//after leaving section 2
+                  		if(origin.index == 1 && direction =='down'){
+                  			document.getElementById("projects").classList.add("fadeIn");
+                  		}
+
+                      if(origin.index == 2 && direction =='up'){
+                  			document.getElementById("projects").classList.remove("fadeIn");
+                  		}
+
+                  		if(origin.index == 2 && direction == 'down'){
+                  			document.getElementById("education").classList.add("fadeIn")
+                  		}
+
+                      if(origin.index == 3 && direction == 'up'){
+                  			document.getElementById("education").classList.remove("fadeIn")
+                  		}
+
+                      if(origin.index == 3 && direction == 'down'){
+                  			document.getElementById("1").classList.add("left");
+                        document.getElementById("3").classList.add("left");
+                        document.getElementById("5").classList.add("left");
+                        document.getElementById("7").classList.add("left");
+                        document.getElementById("2").classList.add("right");
+                        document.getElementById("4").classList.add("right");
+                        document.getElementById("6").classList.add("right");
+                        document.getElementById("8").classList.add("right");
+                  		}
+
+                      if(origin.index == 4 && direction == 'up'){
+                  			document.getElementById("1").classList.remove("left");
+                        document.getElementById("3").classList.remove("left");
+                        document.getElementById("5").classList.remove("left");
+                        document.getElementById("7").classList.remove("left");
+                        document.getElementById("2").classList.remove("right");
+                        document.getElementById("4").classList.remove("right");
+                        document.getElementById("6").classList.remove("right");
+                        document.getElementById("8").classList.remove("right");
+                  		}
+
+                  	},
 
 });
 
