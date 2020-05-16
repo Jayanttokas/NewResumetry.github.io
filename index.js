@@ -7,32 +7,32 @@ hoverStyle = (i) => {
       break;
 
     case 2:
-    document.querySelector(".xyz").src = "robo.PNG";
+    document.querySelector(".xyz").src = "robo.png";
       break;
 
     case 3:
-    document.querySelector(".xyz").src = "budget.PNG";
+    document.querySelector(".xyz").src = "budget.png";
       break;
     default:
 
     case 4:
-    document.querySelector(".xyz").src = "piggame.PNG";
+    document.querySelector(".xyz").src = "piggame.png";
       break;
 
     case 5:
-    document.querySelector(".xyz").src = "coffee.PNG";
+    document.querySelector(".xyz").src = "coffee.png";
     break;
 
     case 6:
-    document.querySelector(".xyz").src = "ytsearch.PNG";
+    document.querySelector(".xyz").src = "ytsearch.png";
     break;
 
     case 7:
-    document.querySelector(".xyz").src = "resume.PNG";
+    document.querySelector(".xyz").src = "resume.png";
     break;
 
     case 8:
-    document.querySelector(".xyz").src = "picsapp.PNG";
+    document.querySelector(".xyz").src = "picsapp.png";
     break;
 
   }
